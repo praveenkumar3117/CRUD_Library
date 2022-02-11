@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<queries>
+<sql id="findActor" paramType="org.foo.Bar">
+		<![CDATA[
+		SELECT * FROM actor where actor_id =${x} AND first_name=${y};
+		]]>
+	</sql>
+	<sql id="findActor2" paramType="org.foo.Bar">
+		<![CDATA[
+		SELECT * FROM actor;
+		]]>
+	</sql>
+	<sql id="addActor" paramType="org.foo.Bar">
+		<![CDATA[
+		INSERT INTO actor VALUES (${propX}, ${propY}, ${propZ}, ${propA});
+		]]>
+	</sql>
+	<sql id="deleteActor" paramType="org.foo.Bar">
+		<![CDATA[
+		DELETE FROM actor WHERE first_name=${propX} AND last_name=${propY};
+		]]>
+	</sql>
+	<sql id="updateActor" paramType="org.foo.Bar">
+		<![CDATA[
+		UPDATE actor SET first_name=${asbfh}, last_name=${asas} WHERE actor_id=${propX};
+		]]>
+	</sql>
+	<sql id="updateCity" paramType="org.foo.Bar">
+		<![CDATA[
+		UPDATE city SET city=${asbfh} WHERE city_id=${propX};
+		]]>
+	</sql>
+</queries>
