@@ -30,4 +30,10 @@
 		UPDATE city SET city=${asbfh} WHERE city_id=${propX};
 		]]>
 	</sql>
+	<sql id="deleteCity" paramType="org.foo.Bar">
+		<![CDATA[
+		DELETE FROM city where city_id=${propx};
+		]]>
+	</sql>
+
 </queries>

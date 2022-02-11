@@ -48,5 +48,10 @@ public class SqlRunnerTest {
         int a  = d.update("updateCity", "\"Wakanda\",184");
         assertEquals(a,1);
     }
+    @Test
+    void delete1(){
+        int a=d.delete("deleteCity","700");
+        assertEquals(a,0);
+    }
 
 }
