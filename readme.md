@@ -2,7 +2,7 @@ Github Repo Link: https://github.com/praveenkumar3117/cs305_2022
 After Cloning the repo and open the project in VScode
 NOTE: Always keep the foreign key constraint factor in mind,you may not able to delete, update, insert due to some foreign key constraint
 NOTE:: Insert, Update, Delete works for all the tables in database, but the selectone and selectmany only works for the actor table.
-
+NOTE: Xml file path should be given correctly
 Steps for Unit Testing
 
 1) selectone: 
