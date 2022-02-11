@@ -14,8 +14,8 @@ public class SqlRunnerTest {
     @Test
     void selectOne(){
 
-        Actor a=(Actor) d.selectOne("findActor", "182, \"DEBBIE\"", Actor.class);
-        assertEquals(a.last_name,"AKROYD");
+        Actor a=(Actor) d.selectOne("findActor", "196, \"BELA\"", Actor.class);
+        assertEquals(a.last_name,"WALKEN");
     }
     
     @SuppressWarnings("unchecked")
