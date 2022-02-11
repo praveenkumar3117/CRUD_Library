@@ -30,14 +30,18 @@ public class Xml {
 	}
 
     public static HashMap<String, String> extractXml() {        //extracting the XML file and creating a hashmap with key as query id and value as the query
-        try {
+		File file;
+		DocumentBuilderFactory documentBuilderFactory;
+		DocumentBuilder documentBuilder;
+		Document document;
+		try {
             HashMap<String, String> map1 = new HashMap<>();
-			File file = new File("D:/cs305_2022/sample.xml");
-			DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
-			DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
-			Document document = documentBuilder.parse(file);
+			file = new File("D:/cs305_2022/sample.xml");
+			documentBuilderFactory = DocumentBuilderFactory.newInstance();
+			documentBuilder = documentBuilderFactory.newDocumentBuilder();
+			document = documentBuilder.parse(file);
 			document.getDocumentElement().normalize();
-			String x1 = "<![CDATA[";       
+			String x1 = "<![CDATA[";       //used to skip these words
 			
 			String x2 = "]]>";
 			String key = "<" + document.getDocumentElement().getNodeName() + ">";
@@ -46,8 +50,10 @@ public class Xml {
 			fileString = fileString.substring(index, fileString.length());
 			fileString = fileString.substring(0, fileString.length()-key.length());
 			int a1 = fileString.indexOf(x1);
-			while (a1 != -1) {
-                String id = fileString.substring(fileString.indexOf("sql id=") + 8,fileString.indexOf("\" paramType"));
+			while (a1>=0) {
+				int temp=fileString.indexOf("sql id=") + 8;
+				int temp2=fileString.indexOf("\" paramType");
+                String id = fileString.substring(temp,temp2);
 				fileString = fileString.substring(a1 + x1.length(),fileString.length());
 				String command = fileString.substring(0, fileString.indexOf(x2));
                 map1.put(id.trim(), command.trim());
