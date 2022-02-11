@@ -45,7 +45,7 @@ public class SqlRunnerTest {
     @Test
     void update1()
     {
-        int a  = d.update("updateCity", "\"KnoWhere\",184");
+        int a  = d.update("updateCity", "\"Wakanda\",184");
         assertEquals(a,1);
     }
 

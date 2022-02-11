@@ -13,7 +13,7 @@ import java.util.HashMap;
 
 public class Xml {
 
-    public static String getStringFromDocument(Document document) {
+    public static String getStringFromDocument(Document document) {            //converting the query file to XML
 		try {
 			DOMSource domSource = new DOMSource(document);
 			StringWriter stringWriter = new StringWriter();
@@ -29,7 +29,7 @@ public class Xml {
 		}
 	}
 
-    public static HashMap<String, String> extractXml() {
+    public static HashMap<String, String> extractXml() {        //extracting the XML file and creating a hashmap with key as query id and value as the query
         try {
             HashMap<String, String> map1 = new HashMap<>();
 			File file = new File("D:/cs305_2022/sample.xml");
@@ -37,7 +37,7 @@ public class Xml {
 			DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
 			Document document = documentBuilder.parse(file);
 			document.getDocumentElement().normalize();
-			String x1 = "<![CDATA[";
+			String x1 = "<![CDATA[";       
 			
 			String x2 = "]]>";
 			String key = "<" + document.getDocumentElement().getNodeName() + ">";
