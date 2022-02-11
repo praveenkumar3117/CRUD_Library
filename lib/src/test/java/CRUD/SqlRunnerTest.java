@@ -22,13 +22,13 @@ public class SqlRunnerTest {
     @Test
     void selectMany() {
         List<Actor> a= (List<Actor>) d.selectMany("findActor2", "", Actor.class);
-        assertEquals(a.size(), 207);
+        assertEquals(a.size(), 206);
     }
 
    @Test
     void update() {
-        int a  = d.update("updateActor", "\"udhsjf\", \"nnfngb\", 184");
-        assertEquals(a,1);
+        int a  = d.update("updateActor", "\"udhsjf\", \"nnfngb\", 768");
+        assertEquals(a,0);
     }
 
     @Test
@@ -39,13 +39,13 @@ public class SqlRunnerTest {
 
     @Test
     void delete() {
-        int a  = d.delete("deleteActor", "\"Manan\",\"Munda\"");
+        int a  = d.delete("deleteActor", "\"Praveen\",\"Ku\"");
         assertEquals(a,0);
     }
     @Test
     void update1()
     {
-        int a  = d.update("updateCity", "\"Wakanda\",184");
+        int a  = d.update("updateCity", "\"Xandar\",184");
         assertEquals(a,1);
     }
     @Test
