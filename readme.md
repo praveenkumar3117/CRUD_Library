@@ -27,6 +27,7 @@ Sample query correspond the queryID is given below.
 same steps as of the selectOne
 
 3) insert:                   (This works for all the tables). I am giving an example of the actor table
+
 @Test
     void insert() {
         int a  = d.insert("addActor", "277, \"Pratima\", \"Singh\", \"2020-02-10 00:00:00\"");
