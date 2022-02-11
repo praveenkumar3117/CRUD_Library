@@ -3,7 +3,7 @@ NOTE:: Insert, Update, Delete works for all the tables in database, but the sele
 
 Steps for Unit Testing
 
-1) selectone
+1) selectone: 
 you need to provide parameter in the form ("queryID","queryparam",Actor.class)
 
 Example
@@ -22,11 +22,11 @@ Sample query correspond the queryID is given below.
 		]]>
 	</sql>
 
-2) selectmany
+2) selectmany: 
 
 same steps as of the selectOne
 
-3) insert                  (This works for all the tables). I am giving an example of the actor table
+3) insert:                   (This works for all the tables). I am giving an example of the actor table
 @Test
     void insert() {
         int a  = d.insert("addActor", "277, \"Pratima\", \"Singh\", \"2020-02-10 00:00:00\"");
@@ -39,7 +39,7 @@ Sample Query corresponding to the uper queryID is given below
 		]]>
 	</sql>
 
-4) update      (This works for all the tables). I am giving an example of city table
+4) update:       (This works for all the tables). I am giving an example of city table
 @Test
     void update1()
     {
@@ -53,7 +53,7 @@ Sample Query corresponding to the upper queryID is given below
 		]]>
 	</sql>
 
-5) delete  (This works for all the tables). I am giving an example of actor table.
+5) delete:   (This works for all the tables). I am giving an example of actor table.
 @Test
     void delete() {
         int a  = d.delete("deleteActor", "\"Manan\",\"Munda\"");
